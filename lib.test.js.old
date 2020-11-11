@@ -1,0 +1,24 @@
+const lib = require('./lib.js')
+const {assert} = require('chai');
+
+describe('mochaStudy', function() {
+  describe('lib', function() {
+    describe('fn1', function() {
+      it('transforms the input to uppercase', done => {
+        lib.fn1('hola pana')
+          .then(result => {
+            assert.equal('HOLA PANA', result);
+            return 'asdfasdf';
+          })
+          .then(() => done(), done)
+      });
+      // it('transforms the input to uppercase', async () => {
+      //   const result = await lib.fn1('hola pana');
+      //   assert.equal('HOLA PANA', result);
+      // });
+      // it('how done works', done => {
+      //   done();
+      // });
+    });
+  });
+});
