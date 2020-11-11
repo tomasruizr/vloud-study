@@ -1,6 +1,6 @@
 function fn1(paramStr) {
   return new Promise((resolve, reject) => 
-    setTimeout(()=>resolve(paramStr.toUpperCase()), 100));
+    setTimeout(()=>resolve(paramStr.toUpperCase()), 0));
 }
 function fn1Prime(paramStr) {
   return new Promise(resolve => {
